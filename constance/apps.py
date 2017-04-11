@@ -9,8 +9,8 @@ class ConstanceConfig(AppConfig):
 
     def ready(self):
         super(ConstanceConfig, self).ready()
-        signals.post_migrate.connect(self.create_perm,
-                                     dispatch_uid='constance.create_perm')
+        #signals.post_migrate.connect(self.create_perm,
+        #                             dispatch_uid='constance.create_perm')
 
     def create_perm(self, using=None, *args, **kwargs):
         """
